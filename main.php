@@ -12,6 +12,8 @@ if (!$pos) {
 }
 $serverConfig = substr($serverConfig, 0, $pos);
 $serverConfig .= "#routes here\n";
+$serverConfig .= "push \"route 35.231.0.0 255.255.0.0\"\n"; // bandcamp
+$serverConfig .= "push \"route 35.226.0.0 255.255.0.0\"\n";
 foreach($ips as $ip)
 {
     if (strlen($ip) && $ip !== $avoid) {
