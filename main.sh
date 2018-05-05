@@ -12,7 +12,7 @@ cd ..
 rm ip-ranges.json
 wget https://ip-ranges.amazonaws.com/ip-ranges.json
 echo "Write  blocked ips to file"
-grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' ip-ranges.json z-i/dump.csv | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.'  |  sort -u > ips.txt
+grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' ip-ranges.json z-i/dump.csv | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.'  |  sort -u > ips.txt
 
 php main.php
 systemctl restart openvpn@server
