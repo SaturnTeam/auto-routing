@@ -1,6 +1,6 @@
 <?php
 $serverConfigPath = '/etc/openvpn/server.conf';
-$avoid = '178.62.192';
+$avoid = '178.62.192.';
 $exclude = [192];
 
 $ips = file_get_contents('ips.txt');
